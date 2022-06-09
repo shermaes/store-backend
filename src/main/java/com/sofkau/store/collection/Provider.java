@@ -5,7 +5,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Objects;
 
-
 @Document(collection="provider")
 public class Provider {
     //atributes

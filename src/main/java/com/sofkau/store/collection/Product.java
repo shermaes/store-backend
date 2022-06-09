@@ -10,6 +10,7 @@ public class Product {
     private String id;
 
     private Provider provider;
+    //embbeding a provider here
 
     private Integer minimum;
 
