@@ -1,10 +1,11 @@
 package com.sofkau.store.collection;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 import java.util.Objects;
-
+@Document(collection="bills")
 public class Bills {
     @Id
     private String id;
