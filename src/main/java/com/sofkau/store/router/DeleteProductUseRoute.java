@@ -1,7 +1,6 @@
 package com.sofkau.store.router;
 
 import com.sofkau.store.usecase.DeleteProductUseCase;
-import com.sofkau.store.usecase.DeleteProviderUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
