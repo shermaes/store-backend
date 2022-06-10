@@ -7,7 +7,7 @@ import java.util.Objects;
 
 @Document(collection="provider")
 public class Provider {
-    //atributes
+    //attributes
     @Id
     private String id;
     private String name;
