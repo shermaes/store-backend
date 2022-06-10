@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
-
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
@@ -17,7 +16,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GetProductsRoute {
     @Bean
     public RouterFunction<ServerResponse> allProducts(GetProductsUseCase get) {
-        return route(GET("/v1/api/products"),
+        return route(GET("/api/get/products"),
                 request -> ServerResponse.status(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromProducer(get.apply(), ProductDTO.class))

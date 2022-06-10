@@ -17,7 +17,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GetProviderRoute {
     @Bean
     public RouterFunction<ServerResponse> allProviders(GetProviderUseCase get) {
-        return route(GET("/v1/api/providers"),
+        return route(GET("/api/get/providers"),
                 request -> ServerResponse.status(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromProducer(get.apply(), ProviderDTO.class))
