@@ -8,20 +8,19 @@ import java.util.Objects;
 public class Receipt {
     @Id
     private String id;
-
     private Provider provider;
-
     private String id_product;
-
     private String date;
+    private Integer quantity;
 
     //constructor
 
-    public Receipt(String id, Provider provider, String id_product, String date) {
+    public Receipt(String id, Provider provider, String id_product, String date, Integer quantity) {
         this.id = id;
         this.provider = provider;
         this.id_product = id_product;
         this.date = date;
+        this.quantity= quantity;
     }
 
     public Receipt() {
@@ -61,15 +60,24 @@ public class Receipt {
         this.date = date;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
     //toString
+
 
     @Override
     public String toString() {
-        return "Receipts{" +
+        return "Receipt{" +
                 "id='" + id + '\'' +
                 ", provider=" + provider +
                 ", id_product='" + id_product + '\'' +
                 ", date='" + date + '\'' +
+                ", quantity=" + quantity +
                 '}';
     }
 
@@ -78,11 +86,11 @@ public class Receipt {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Receipt receipt = (Receipt) o;
-        return id.equals(receipt.id) && provider.equals(receipt.provider) && id_product.equals(receipt.id_product) && date.equals(receipt.date);
+        return id.equals(receipt.id) && provider.equals(receipt.provider) && id_product.equals(receipt.id_product) && date.equals(receipt.date) && quantity.equals(receipt.quantity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, provider, id_product, date);
+        return Objects.hash(id, provider, id_product, date, quantity);
     }
 }

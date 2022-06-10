@@ -12,4 +12,6 @@ public class ReceiptDTO {
     private String id_product;
 
     private String date;
+
+    private Integer quantity;
 }

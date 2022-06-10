@@ -12,17 +12,17 @@ public class Bills {
     private String date;
     private String client_name;
     private String clerk;
-    private List<Product> productList;
+    private List<Sale> productsSold;
     private Integer total_paid;
 
     //constructors
 
-    public Bills(String id, String date, String client_name, String clerk, List<Product> productList, Integer total_paid) {
+    public Bills(String id, String date, String client_name, String clerk, List<Sale> productsSold, Integer total_paid) {
         this.id = id;
         this.date = date;
         this.client_name = client_name;
         this.clerk = clerk;
-        this.productList = productList;
+        this.productsSold = productsSold;
         this.total_paid = total_paid;
     }
 
@@ -62,12 +62,12 @@ public class Bills {
         this.clerk = clerk;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public List<Sale> getProductsSold() {
+        return productsSold;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setProductsSold(List<Sale> productList) {
+        this.productsSold = productList;
     }
 
     public Integer getTotal_paid() {
@@ -80,6 +80,7 @@ public class Bills {
 
     //toString
 
+
     @Override
     public String toString() {
         return "Bills{" +
@@ -87,7 +88,7 @@ public class Bills {
                 ", date='" + date + '\'' +
                 ", client_name='" + client_name + '\'' +
                 ", clerk='" + clerk + '\'' +
-                ", productList=" + productList +
+                ", productsSold=" + productsSold +
                 ", total_paid=" + total_paid +
                 '}';
     }
@@ -97,11 +98,11 @@ public class Bills {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bills bills = (Bills) o;
-        return id.equals(bills.id) && date.equals(bills.date) && client_name.equals(bills.client_name) && clerk.equals(bills.clerk) && productList.equals(bills.productList) && total_paid.equals(bills.total_paid);
+        return id.equals(bills.id) && date.equals(bills.date) && client_name.equals(bills.client_name) && clerk.equals(bills.clerk) && productsSold.equals(bills.productsSold) && total_paid.equals(bills.total_paid);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, client_name, clerk, productList, total_paid);
+        return Objects.hash(id, date, client_name, clerk, productsSold, total_paid);
     }
 }

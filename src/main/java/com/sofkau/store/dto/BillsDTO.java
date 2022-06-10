@@ -1,6 +1,7 @@
 package com.sofkau.store.dto;
 
 import com.sofkau.store.collection.Product;
+import com.sofkau.store.collection.Sale;
 import lombok.Data;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class BillsDTO {
 
     private String clerk;
 
-    private List<Product> productList;
+    private List<Sale> productsSold;
 
     private Integer total_paid;
 }
