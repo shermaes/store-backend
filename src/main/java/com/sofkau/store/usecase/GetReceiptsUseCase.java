@@ -1,6 +1,5 @@
 package com.sofkau.store.usecase;
 
-import com.sofkau.store.dto.ProviderDTO;
 import com.sofkau.store.dto.ReceiptDTO;
 import com.sofkau.store.mapper.StoreMapper;
 import com.sofkau.store.repository.IReceiptRepository;

@@ -1,10 +1,8 @@
 package com.sofkau.store.router;
 
 import com.sofkau.store.collection.Product;
-import com.sofkau.store.collection.Provider;
 import com.sofkau.store.dto.ProductDTO;
 import com.sofkau.store.usecase.GetProductsUseCase;
-import com.sofkau.store.usecase.GetProviderUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

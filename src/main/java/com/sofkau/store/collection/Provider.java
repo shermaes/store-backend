@@ -5,18 +5,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Objects;
 
-@Document(collection="provider")
+@Document(collection = "provider")
 public class Provider {
     //attributes
     @Id
     private String id;
     private String name;
     private String passport;
-    private Integer phone;
+    private String phone;
 
     //constructors
 
-    public Provider(String id, String name, String passport, Integer phone) {
+    public Provider(String id, String name, String passport, String phone) {
         this.id = id;
         this.name = name;
         this.passport = passport;
@@ -27,8 +27,6 @@ public class Provider {
     }
 
     //getter and setters
-
-
     public String getId() {
         return id;
     }
@@ -53,11 +51,11 @@ public class Provider {
         this.passport = passport;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 // to string

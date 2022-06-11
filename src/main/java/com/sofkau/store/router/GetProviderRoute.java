@@ -4,8 +4,6 @@ import com.sofkau.store.collection.Provider;
 import com.sofkau.store.dto.ProviderDTO;
 import com.sofkau.store.usecase.GetProviderUseCase;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

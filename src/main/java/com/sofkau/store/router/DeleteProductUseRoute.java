@@ -1,7 +1,6 @@
 package com.sofkau.store.router;
 
 import com.sofkau.store.usecase.DeleteProductUseCase;
-import com.sofkau.store.usecase.DeleteProviderUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;

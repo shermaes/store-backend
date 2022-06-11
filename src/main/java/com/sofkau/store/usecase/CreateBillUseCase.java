@@ -1,8 +1,6 @@
 package com.sofkau.store.usecase;
 
-import com.sofkau.store.collection.Bills;
 import com.sofkau.store.dto.BillsDTO;
-import com.sofkau.store.dto.ReceiptDTO;
 import com.sofkau.store.mapper.StoreMapper;
 import com.sofkau.store.repository.IBillsRepository;
 import org.springframework.beans.factory.annotation.Autowired;

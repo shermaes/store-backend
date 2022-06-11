@@ -1,12 +1,8 @@
 package com.sofkau.store.router;
 
 import com.sofkau.store.collection.Bills;
-import com.sofkau.store.collection.Product;
 import com.sofkau.store.dto.BillsDTO;
-import com.sofkau.store.dto.ReceiptDTO;
 import com.sofkau.store.usecase.CreateBillUseCase;
-import com.sofkau.store.usecase.CreateProductUseCase;
-import com.sofkau.store.usecase.CreateReceiptsUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,6 +1,5 @@
 package com.sofkau.store.dto;
 
-import com.sofkau.store.collection.Product;
 import com.sofkau.store.collection.Sale;
 import lombok.Data;
 import java.util.List;
