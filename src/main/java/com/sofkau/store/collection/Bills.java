@@ -11,16 +11,19 @@ public class Bills {
     private String id;
     private String date;
     private String client_name;
+
+    private Integer quantity;
     private String clerk;
     private String productsSold;
-    private Integer total_paid;
+    private Float total_paid;
 
     //constructors
 
-    public Bills(String id, String date, String client_name, String clerk, String productsSold, Integer total_paid) {
+    public Bills(String id, String date, String client_name, Integer quantity, String clerk, String productsSold, Float total_paid) {
         this.id = id;
         this.date = date;
         this.client_name = client_name;
+        this.quantity = quantity;
         this.clerk = clerk;
         this.productsSold = productsSold;
         this.total_paid = total_paid;
@@ -28,7 +31,6 @@ public class Bills {
 
     public Bills() {
     }
-    //getter and setters
 
     public String getId() {
         return id;
@@ -54,6 +56,14 @@ public class Bills {
         this.client_name = client_name;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
     public String getClerk() {
         return clerk;
     }
@@ -66,31 +76,16 @@ public class Bills {
         return productsSold;
     }
 
-    public void setProductsSold(String productList) {
-        this.productsSold = productList;
+    public void setProductsSold(String productsSold) {
+        this.productsSold = productsSold;
     }
 
-    public Integer getTotal_paid() {
+    public Float getTotal_paid() {
         return total_paid;
     }
 
-    public void setTotal_paid(Integer total_paid) {
+    public void setTotal_paid(Float total_paid) {
         this.total_paid = total_paid;
-    }
-
-    //toString
-
-
-    @Override
-    public String toString() {
-        return "Bills{" +
-                "id='" + id + '\'' +
-                ", date='" + date + '\'' +
-                ", client_name='" + client_name + '\'' +
-                ", clerk='" + clerk + '\'' +
-                ", productsSold=" + productsSold +
-                ", total_paid=" + total_paid +
-                '}';
     }
 
     @Override
@@ -98,11 +93,24 @@ public class Bills {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bills bills = (Bills) o;
-        return id.equals(bills.id) && date.equals(bills.date) && client_name.equals(bills.client_name) && clerk.equals(bills.clerk) && productsSold.equals(bills.productsSold) && total_paid.equals(bills.total_paid);
+        return id.equals(bills.id) && date.equals(bills.date) && client_name.equals(bills.client_name) && quantity.equals(bills.quantity) && clerk.equals(bills.clerk) && Objects.equals(productsSold, bills.productsSold) && total_paid.equals(bills.total_paid);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, client_name, clerk, productsSold, total_paid);
+        return Objects.hash(id, date, client_name, quantity, clerk, productsSold, total_paid);
+    }
+
+    @Override
+    public String toString() {
+        return "Bills{" +
+                "id='" + id + '\'' +
+                ", date='" + date + '\'' +
+                ", client_name='" + client_name + '\'' +
+                ", quantity=" + quantity +
+                ", clerk='" + clerk + '\'' +
+                ", productsSold='" + productsSold + '\'' +
+                ", total_paid=" + total_paid +
+                '}';
     }
 }

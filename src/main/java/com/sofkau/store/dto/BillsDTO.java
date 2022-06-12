@@ -8,11 +8,13 @@ public class BillsDTO {
 
     private String date;
 
+    private Integer quantity;
+
     private String client_name;
 
     private String clerk;
 
     private String productsSold;
 
-    private Integer total_paid;
+    private Float total_paid;
 }
