@@ -8,14 +8,14 @@ import java.util.Objects;
 public class Receipt {
     @Id
     private String id;
-    private Provider provider;
+    private String provider;
     private String id_product;
     private String date;
     private Integer quantity;
 
     //constructor
 
-    public Receipt(String id, Provider provider, String id_product, String date, Integer quantity) {
+    public Receipt(String id, String provider, String id_product, String date, Integer quantity) {
         this.id = id;
         this.provider = provider;
         this.id_product = id_product;
@@ -36,11 +36,11 @@ public class Receipt {
         this.id = id;
     }
 
-    public Provider getProvider() {
+    public String getProvider() {
         return provider;
     }
 
-    public void setProvider(Provider provider) {
+    public void setProvider(String provider) {
         this.provider = provider;
     }
 

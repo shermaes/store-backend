@@ -10,7 +10,7 @@ public class Product {
     @Id
     private String id;
 
-    private Provider provider;
+    private String provider;
     //embbeding a provider here
 
     private Integer minimum;
@@ -27,7 +27,7 @@ public class Product {
 
     //constructors
 
-    public Product(String id, Provider provider, Integer minimum, Integer maximum, String name_product, String description, Integer units_available, Float price) {
+    public Product(String id, String provider, Integer minimum, Integer maximum, String name_product, String description, Integer units_available, Float price) {
         this.id = id;
         this.provider = provider;
         this.minimum = minimum;
@@ -51,11 +51,11 @@ public class Product {
         this.id = id;
     }
 
-    public Provider getProvider() {
+    public String getProvider() {
         return provider;
     }
 
-    public void setProvider(Provider provider) {
+    public void setProvider(String provider) {
         this.provider = provider;
     }
 

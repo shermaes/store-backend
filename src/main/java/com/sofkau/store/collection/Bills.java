@@ -3,7 +3,6 @@ package com.sofkau.store.collection;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
 import java.util.Objects;
 
 @Document(collection = "bills")
@@ -13,12 +12,12 @@ public class Bills {
     private String date;
     private String client_name;
     private String clerk;
-    private List<Sale> productsSold;
+    private String productsSold;
     private Integer total_paid;
 
     //constructors
 
-    public Bills(String id, String date, String client_name, String clerk, List<Sale> productsSold, Integer total_paid) {
+    public Bills(String id, String date, String client_name, String clerk, String productsSold, Integer total_paid) {
         this.id = id;
         this.date = date;
         this.client_name = client_name;
@@ -63,11 +62,11 @@ public class Bills {
         this.clerk = clerk;
     }
 
-    public List<Sale> getProductsSold() {
+    public String getProductsSold() {
         return productsSold;
     }
 
-    public void setProductsSold(List<Sale> productList) {
+    public void setProductsSold(String productList) {
         this.productsSold = productList;
     }
 
