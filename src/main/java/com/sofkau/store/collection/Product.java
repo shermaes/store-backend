@@ -23,11 +23,11 @@ public class Product {
 
     private Integer units_available;
 
-    private Float price;
+    private Double price;
 
     //constructors
 
-    public Product(String id, String provider, Integer minimum, Integer maximum, String name_product, String description, Integer units_available, Float price) {
+    public Product(String id, String provider, Integer minimum, Integer maximum, String name_product, String description, Integer units_available, Double price) {
         this.id = id;
         this.provider = provider;
         this.minimum = minimum;
@@ -99,11 +99,11 @@ public class Product {
         this.units_available = units_available;
     }
 
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

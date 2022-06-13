@@ -11,15 +11,14 @@ public class Bills {
     private String id;
     private String date;
     private String client_name;
-
     private Integer quantity;
     private String clerk;
     private String productsSold;
-    private Float total_paid;
+    private Double total_paid;
 
     //constructors
 
-    public Bills(String id, String date, String client_name, Integer quantity, String clerk, String productsSold, Float total_paid) {
+    public Bills(String id, String date, String client_name, Integer quantity, String clerk, String productsSold, Double total_paid) {
         this.id = id;
         this.date = date;
         this.client_name = client_name;
@@ -80,11 +79,11 @@ public class Bills {
         this.productsSold = productsSold;
     }
 
-    public Float getTotal_paid() {
+    public Double getTotal_paid() {
         return total_paid;
     }
 
-    public void setTotal_paid(Float total_paid) {
+    public void setTotal_paid(Double total_paid) {
         this.total_paid = total_paid;
     }
 

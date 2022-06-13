@@ -2,7 +2,6 @@ package com.sofkau.store.router;
 
 import com.sofkau.store.collection.Product;
 import com.sofkau.store.dto.ProductDTO;
-import com.sofkau.store.usecase.UpdateProductUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

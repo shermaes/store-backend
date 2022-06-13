@@ -9,12 +9,16 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 @Service
-@AllArgsConstructor
 public class GetProductsUseCase {
     @Autowired
     private IProductRepository iProductRepository;
     @Autowired
     private StoreMapper storeMapper;
+
+    public GetProductsUseCase(IProductRepository iProductRepository, StoreMapper storeMapper) {
+        this.iProductRepository = iProductRepository;
+        this.storeMapper = storeMapper;
+    }
 
     public Flux<ProductDTO> apply(){return iProductRepository.findAll().map(storeMapper::toProductDTO);}
 }

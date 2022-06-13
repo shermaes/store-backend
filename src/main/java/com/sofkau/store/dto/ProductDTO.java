@@ -20,4 +20,6 @@ public class ProductDTO {
     private Integer units_available;
 
     private Float price;
+
+
 }
