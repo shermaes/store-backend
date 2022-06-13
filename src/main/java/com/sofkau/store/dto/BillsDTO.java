@@ -16,5 +16,5 @@ public class BillsDTO {
 
     private String productsSold;
 
-    private Float total_paid;
+    private Double total_paid;
 }
